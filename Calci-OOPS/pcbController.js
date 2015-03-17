@@ -1,3 +1,4 @@
+// PCB Controller
 var pcbController = function () {
     this.calculationFinished = false;
     this.isNumValue1Done = false;
@@ -7,6 +8,7 @@ var pcbController = function () {
     this.currentSymbol = "";
 };
 
+// PCB Controller Number functionality
 pcbController.prototype.operateNumber = function(screenElement, inputValue)
 {
 var displayControllerObject = new displayController();
@@ -40,6 +42,7 @@ if ((this.calculationFinished === true) && (!isNaN(this.currentSymbol))) {
             }	
 };
         
+// PCB Controller Operator functionality
 pcbController.prototype.useOperator = function (screenElement, inputValue)
 {
     var displayControllerObject = new displayController();
@@ -78,22 +81,27 @@ pcbController.prototype.useOperator = function (screenElement, inputValue)
          case "=":
             switch(this.currentSymbol)
             {
+			    // Operator is a divide operator
                 case "/":
                     if (parseInt(this.numValue2))
                             {
                                 displayValue = parseInt(calculatorControllerObject.divisionOperation(parseInt(this.numValue1) , parseInt(this.numValue2)),0);
                             }
-                            break;
+                            break; 
+				// Operator is a multiplication operator
                 case "*":
                             displayValue = calculatorControllerObject.multilpicationOperation(parseInt(this.numValue1) , parseInt(this.numValue2));
                             break;
+				// Operator is a addition operator
                 case "+":
                             displayValue = calculatorControllerObject.sumOperation(parseInt(this.numValue1) , parseInt(this.numValue2));
                             break;
+				// Operator is a subtraction operator
                 case "-":
                             displayValue = calculatorControllerObject.subtractionOperation(parseInt(this.numValue1) , parseInt(this.numValue2));
                             break;
-                case "%":
+                // Operator is a modulus operator
+				case "%":
                             displayValue = calculatorControllerObject.modulusOperation(parseInt(this.numValue1) , parseInt(this.numValue2));
                             break;
                 default: 

@@ -1,3 +1,4 @@
+// Create display screen in the calculator
 var createDisplay = function (container) {
     var mainDivElement = document.getElementById("calculator");
     var displayObject = new display("20", "screen", "glass", "readOnly");

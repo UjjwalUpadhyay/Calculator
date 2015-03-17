@@ -1,9 +1,11 @@
+// Button Model containing all the properties related to the button
 var buttonsModel = function (size, className, material) {
     this.size = size;
     this.class = className;
     this.materialsUsed = material;
 };
 
+// Button Number JSON having properties defined for all the calculator number buttons 
 var buttonsNumber = function (size, className, material, type) {
     buttonsModel.call(this, size, className, material);
     this.type = type;
@@ -102,6 +104,7 @@ var buttonsNumber = function (size, className, material, type) {
 	};
 };
 
+// Button Operator JSON having properties defined for all the calculator operator buttons
 var buttonsOperator = function (size, className, material, type) {
     buttonsModel.call(this, size, className, material);
     this.type = type;
@@ -164,20 +167,3 @@ var buttonsOperator = function (size, className, material, type) {
                 }
 	};
 };
-
-
-document.addEventListener('DOMContentLoaded', function()
-{/*
-	var btn = new buttonsModel("20", "button", "plastic");		
-	buttonsNumber.prototype = Object.create(buttonsModel.prototype);
-    buttonsNumber.prototype.constructor = buttonsModel;
-    buttonsOperator.prototype = Object.create(buttonsModel.prototype);
-    buttonsOperator.prototype.constructor = buttonsModel;
-
-    var d = new createDisplay();
-	var btnView = new buttonsCreate();
-	//var btnCntrl = new buttonsController();
-*/
-});
-
-//alert(bn.buttonNumberObject."Nine");

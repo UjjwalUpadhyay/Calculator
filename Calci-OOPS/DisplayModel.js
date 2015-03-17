@@ -1,3 +1,4 @@
+// Display Model defining the properties for the display device
 var display = function (size, className, material, type) {
     this.size = size;
     this.class = className;

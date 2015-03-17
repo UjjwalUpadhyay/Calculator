@@ -19,13 +19,14 @@
 <script src="pcbController.js" type="text/javascript"></script>
 <script src="CalculatorController.js" type="text/javascript"></script>
 <script src="CalculatorView.js" type="text/javascript"></script>
+<script src="CalculatorModel.js" type="text/javascript"></script>
 <script>
-	var calculatorObject = new calculatorController();
-	var pcbControllerObject = new pcbController();
-	var calculatorCreateObject = new calculatorCreate();
-	var buttonsControllerObject = new buttonsController();
+	var calculatorObject = new calculatorController(); // Initialize calculator controller object
+	var pcbControllerObject = new pcbController(); // Initialize pcbController object
+	var calculatorCreateObject = new calculatorCreate(); // Initialize calculator view object
+	var buttonsControllerObject = new buttonsController(); // Initialize buttons controller object
 
-        var calculatorObject1 = new calculatorController();
+    var calculatorObject1 = new calculatorController();
 	var pcbControllerObject1 = new pcbController();
 	var calculatorCreateObject1 = new calculatorCreate();
 	var buttonsControllerObject1 = new buttonsController();

@@ -1,3 +1,4 @@
+// Button Controller containing all button-related functionalities
 var buttonsController = function () {
     this.isNumValue1Done = false;
     this.isNumValue2Done = false;
@@ -7,6 +8,7 @@ var buttonsController = function () {
     this.screenElement = "";
 };
 
+// OnClick event for the button 
 buttonsController.prototype.btnClick = function(event)
 {
     var inputValue;
@@ -29,11 +31,3 @@ buttonsController.prototype.btnClick = function(event)
 	}
          
 }
-
-// To do:
-/*
-1. inputDigits function
-2. Display calculator
-3. Controller for operators
-4. Remaining MVCs
-*/
